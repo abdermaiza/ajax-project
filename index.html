@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="jquery.min.js"></script> <!-- Call JQuery Library -->
+	<script src="try_ajax.js"></script> <!-- Ajax JQuery script --> 
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Roboto, sans-serif;
+		}
+		#div1 h1 {
+			text-align: center;
+		    height: 3rem;
+		    text-transform: uppercase;
+		    text-shadow: rgba(148,148,232,1) 1px 1px 1px;
+		    text-decoration: underline;
+		}
+		.container {
+		    display: grid;
+            grid-template-columns: 6fr 4fr;
+            padding: 0 30px;
+            min-height: 100vh;
+		}
+		#home {
+			position: relative;
+			line-height: 2;
+			display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+            grid-gap: 16px;
+            padding: 0 30px 30px 0;
+		}
+		.item {
+			position: relative;
+			height: 100%;
+		    text-align: center;
+		    max-width: 260px;
+		    margin: auto;
+		    padding: 0 20px;
+		    transition: all .3s ease-in-out;
+		}
+		.item:hover {
+		    background-color: rgba(148,148,232,0.3);
+		    cursor: pointer;
+		}
+		.item-title {
+		    margin: .5rem 0;
+		}
+		#input {
+		    position: absolute;
+		    width: 256px;
+		    left: 0;
+		    top: 0;
+		    opacity: 0;
+		    height: 300px;
+		    cursor: pointer;
+		    transform: translateY(1rem);
+		}
+		label {
+		    margin: 1rem;
+   			cursor: pointer;
+		}
+		img {
+		    display: block;
+		    max-width: calc(100% + 40px);
+		    margin-left: -20px;
+	        object-fit: contain;
+		}
+		.desc {
+			margin: 0 0 1rem 0;
+		}
+
+		#title {
+			padding: 1rem;
+			text-align: center;
+		}
+		.houses-detail {
+		    padding: 0;
+		    background-color: rgba(148, 148, 232, 0.8);
+		    height: 100%;
+	        display: flex;
+			flex-direction: column;
+		}
+		.houses-detail h1 {
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		.houses-detail h2 {
+			font-size: 1rem;
+		    font-weight: 500;
+		}
+		.houses-detail img {
+			margin: 1rem 0;
+			object-fit: cover;
+			min-height: 270px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="div1">
+		<h1>Ajax choice home</h1>
+	</div>
+
+	<section class="container">
+		<div id="home">
+
+	        <div class="item">
+	            <img src="https://placeimg.com/260/195/arch" class="item-img" alt="">
+	            <h4 class="item-title">ATHIS MONS</h4>
+	            <input type="checkbox" value="1" id="input">
+	            <label for="1" value="1" class="desc"> Maison 1</label>
+	        </div>
+			
+	        <div class="item">
+	            <img src="https://placeimg.com/260/195/arch" class="item-img" alt="">
+	            <h4 class="item-title">JUVISY SUR ORGE</h4>
+	            <input type="checkbox" value="2" id="input">
+	            <label for="2" value="2" class="desc"> Maison 2</label>
+	        </div>
+	        
+	        <div class="item">
+	            <img src="https://placeimg.com/260/195/arch" class="item-img" alt="">
+	            <h4 class="item-title">CRETEIL</h4>
+	            <input type="checkbox" value="3" id="input">
+	            <label for="3" value="3" class="desc"> Maison 3</label>
+	        </div>
+
+	        <div class="item">
+	            <img src="https://placeimg.com/260/195/arch" class="item-img" alt="">
+	            <h4 class="item-title">DRAVEIL</h4>
+	            <input type="checkbox" value="4" id="input">
+	            <label for="4" value="4" class="desc"> Maison 4</label>
+	        </div>
+
+		</div>   
+
+		<div id="title" class="houses-detail"></div> <!-- Div vide pour afficher les titres & image -->
+			<!-- 
+		<div id="subtitle" class="zizou"></div> Div vide pour afficher les sous-titres -->
+
+	</section>
+
+
+</body>
+
+</html>
